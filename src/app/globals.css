@@ -1,0 +1,75 @@
+@import "tailwindcss";
+:root{--cream:#f4f0e7;--sage:#dfe3d2;--green:#58654b;--dark:#263023;--gold:#a88445}
+*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:7rem} body{margin:0;background:var(--cream);color:#292b26;font-family:Arial,Helvetica,sans-serif}.serif{font-family:Georgia,'Times New Roman',serif}.tracking-brand{letter-spacing:.38em}.hand{font-family:"Brush Script MT","Segoe Script","Apple Chancery","URW Chancery L",cursive;font-style:italic;font-weight:400}.hairline{border-color:rgba(38,48,35,.18)}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}.transition-all,.transition-opacity{transition-duration:.01ms!important}}
+
+/* Editorial spacing and understated depth on the actual homepage. */
+.hero-parallax {
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: 60% center;
+}
+@media (min-width: 640px) {
+  .hero-parallax { background-position: 50% 40%; }
+}
+.parallax-panel { background-attachment: scroll; background-size: cover; }
+.reveal-section { opacity: 0; transform: translateY(32px); transition: opacity 850ms ease, transform 950ms cubic-bezier(.2,.7,.2,1); }
+.reveal-section.is-visible { opacity: 1; transform: translateY(0); }
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  .hero-parallax,.parallax-panel { background-attachment: fixed; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-parallax,.parallax-panel { background-attachment: scroll; }
+  .reveal-section { opacity: 1; transform: none; transition: none; }
+}
+
+/* The native dialog provides modal focus handling; only its panel slides. */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 250ms ease, display 250ms allow-discrete, overlay 250ms allow-discrete;
+}
+.mobile-menu[open] { opacity: 1; }
+.mobile-menu::backdrop {
+  background: rgb(38 48 35 / 35%);
+  opacity: 0;
+  transition: opacity 250ms ease, display 250ms allow-discrete, overlay 250ms allow-discrete;
+}
+.mobile-menu[open]::backdrop { opacity: 1; }
+.mobile-menu-panel {
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(.2,.7,.2,1);
+}
+.mobile-menu[open] .mobile-menu-panel { transform: translateX(0); }
+@starting-style {
+  .mobile-menu[open], .mobile-menu[open]::backdrop { opacity: 0; }
+  .mobile-menu[open] .mobile-menu-panel { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu, .mobile-menu::backdrop, .mobile-menu-panel { transition: none; }
+}
+
+.mobile-menu .menu-link {
+  transition: color 180ms ease, opacity 180ms ease;
+  text-decoration-color: transparent;
+  text-underline-offset: .2em;
+}
+.mobile-menu .menu-link:hover { color: #58654b; text-decoration: underline; }
+.mobile-menu .menu-link:focus-visible {
+  outline: 2px solid #354B3E;
+  outline-offset: 6px;
+  border-radius: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu .menu-link { transition: none; }
+}

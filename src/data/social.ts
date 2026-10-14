@@ -1,0 +1,1 @@
+export const instagramUrl = "https://www.instagram.com/h.e.rverse?stkn=MXFqODYxdHo1M2FtMw%253D%253D&utm_source=qr&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0DMTAwAHBkb2YCc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsGvAVWW66eioznI7iHCUr0gXFnGUish6M8_g9EhchvhH_hZdpS8rZ5j7m28_aem_P5sCUXzkOILaaOkf1ek5-g";
