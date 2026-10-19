@@ -28,8 +28,14 @@ export default function About() {
       </div>
       <div
         className="bg-cover bg-center min-h-[320px] sm:min-h-[440px] parallax-panel"
-        style={{ backgroundImage: `url('${photos[1]}')` }}
-      />
+        data-parallax="panel"
+      >
+        <div
+          aria-hidden="true"
+          className="parallax-image"
+          style={{ backgroundImage: `url('${photos[1]}')` }}
+        />
+      </div>
     </section>
   );
 }

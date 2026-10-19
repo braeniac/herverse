@@ -4,12 +4,16 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen min-h-[100svh] bg-cover bg-no-repeat flex items-center hero-parallax"
-      style={{
-        backgroundImage: `linear-gradient(90deg,rgba(20,25,18,.68),rgba(20,25,18,.06)),url('${photos[0]}')`,
-      }}
+      data-parallax="hero"
+      className="relative w-full min-h-screen min-h-[100svh] flex items-center hero-parallax"
     >
-      <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-24 text-white py-20 sm:py-28">
+      <div
+        className="parallax-image hero-image"
+        aria-hidden="true"
+        style={{ backgroundImage: `url('${photos[0]}')` }}
+      />
+      <div className="hero-shade" aria-hidden="true" />
+      <div className="hero-content relative max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-24 text-white py-20 sm:py-28">
         <p className="text-[10px] sm:text-[11px] leading-6 tracking-[.2em] sm:tracking-[.32em] mb-8">
           WOMEN’S
           WELLBEING / CONNECTION / ADVENTURE
