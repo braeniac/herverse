@@ -15,9 +15,6 @@ export default function UpcomingEvents() {
             H.E.R experiences are being thoughtfully created. Event details
             and registration will be added as they become available.
           </p>
-          <p className="mt-5 text-[11px] tracking-[.18em]">
-            PRICING: SEVA / MINIMAL FEE
-          </p>
         </div>
         <EventCarousel
           events={events}
