@@ -1,4 +1,4 @@
-import { photos } from "@/data/homepage";
+import HeroBackground from "@/components/sections/HeroBackground";
 
 export default function Hero() {
   return (
@@ -7,13 +7,9 @@ export default function Hero() {
       data-parallax="hero"
       className="relative w-full min-h-screen min-h-[100svh] flex items-center hero-parallax"
     >
-      <div
-        className="parallax-image hero-image"
-        aria-hidden="true"
-        style={{ backgroundImage: `url('${photos[0]}')` }}
-      />
+      <HeroBackground />
       <div className="hero-shade" aria-hidden="true" />
-      <div className="hero-content relative max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-24 text-white py-20 sm:py-28">
+      <div className="hero-content relative max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-24 text-cream py-20 sm:py-28">
         <p className="text-[10px] sm:text-[11px] leading-6 tracking-[.2em] sm:tracking-[.32em] mb-8">
           WOMEN’S
           WELLBEING / CONNECTION / ADVENTURE
@@ -29,7 +25,7 @@ export default function Hero() {
         </p>
         <a
           href="#about"
-          className="inline-block mt-10 rounded-full bg-[var(--green)] px-7 py-4 text-[10px] tracking-[.22em]"
+          className="inline-block mt-10 rounded-full border border-gold/70 bg-pine px-7 py-4 text-[10px] tracking-[.22em] transition-colors hover:bg-sage hover:text-pine motion-reduce:transition-none"
         >
           DISCOVER H.E.R →
         </a>

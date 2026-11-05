@@ -10,7 +10,7 @@ import Mission from "@/components/sections/Mission";
 
 export default function Home() {
   return (
-    <main className="pt-28">
+    <main className="site-main">
       <ScrollReveal />
       <Navbar />
       <Hero />

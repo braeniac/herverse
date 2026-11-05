@@ -5,9 +5,9 @@ export default function UpcomingEvents() {
   return (
     <section
       id="events"
-      className="reveal-section px-6 sm:px-8 lg:px-20 py-16 sm:py-24 lg:py-36 bg-[#f7f3ea]"
+      className="px-6 sm:px-8 lg:px-20 py-12 sm:py-16 lg:py-20 bg-cream"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[.7fr_2fr] gap-14 lg:gap-20">
+      <div className="reveal-section grid grid-cols-1 lg:grid-cols-[.7fr_2fr] gap-8 sm:gap-10 lg:gap-14">
         <div>
           <p className="text-[10px] tracking-[.25em]">UPCOMING EXPERIENCES</p>
           <h2 className="serif text-4xl sm:text-5xl mt-3">Join Us</h2>

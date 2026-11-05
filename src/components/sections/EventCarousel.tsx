@@ -54,7 +54,7 @@ export default function EventCarousel({ events, imageUrls }: {
     timer.current = setTimeout(finishSlide, 500);
   }
 
-  const buttonClassName = "flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--green)]/25 bg-[var(--cream)] text-[var(--green)] transition-colors hover:bg-[var(--sage)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--green)] motion-reduce:transition-none";
+  const buttonClassName = "flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-pine/60 bg-cream text-pine transition-colors hover:bg-sage motion-reduce:transition-none";
 
   return (
     <div
@@ -62,7 +62,7 @@ export default function EventCarousel({ events, imageUrls }: {
       aria-roledescription="carousel"
       aria-label="Upcoming events"
       tabIndex={0}
-      className="-mx-4 grid min-w-0 sm:mx-0 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-1 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--green)] sm:gap-2"
+      className="-mx-4 grid min-w-0 sm:mx-0 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-1 rounded-sm sm:gap-2"
       onKeyDown={(event) => {
         if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
           event.preventDefault();

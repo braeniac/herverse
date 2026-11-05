@@ -3,8 +3,8 @@
   "short_name": "H.E.R",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f4f0e7",
-  "theme_color": "#58654b",
+  "background_color": "#FEFDF3",
+  "theme_color": "#262E26",
   "icons": [
     { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }

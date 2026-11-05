@@ -7,7 +7,7 @@ const headingClassName = "text-[10px] leading-5 tracking-[.25em] uppercase";
 
 export default function Footer() {
   return (
-    <footer className="relative isolate overflow-hidden bg-[#4e5b43] px-6 sm:px-8 py-16 text-[#f5f0e6] sm:py-20 lg:px-20">
+    <footer className="relative isolate overflow-hidden bg-pine px-6 sm:px-8 py-16 text-cream sm:py-20 lg:px-20">
       <svg
         viewBox="0 0 240 420"
         aria-hidden="true"
@@ -25,15 +25,15 @@ export default function Footer() {
           <div className="flex items-center justify-center sm:justify-start xl:pr-10">
             <Logo className="w-40 max-w-full" />
           </div>
-          <div className="flex flex-col justify-center xl:border-l xl:border-white/20 xl:px-10">
+          <div className="flex flex-col justify-center xl:border-l xl:border-gold/35 xl:px-10">
             <h2 className={headingClassName}>Stay Connected</h2>
-            <p className="serif mt-5 max-w-sm text-sm leading-7">
+            <p className="mt-5 max-w-sm text-sm leading-7">
               New experiences, gatherings and H.E.R updates are coming soon.
             </p>
           </div>
-          <nav aria-label="Footer explore" className="xl:border-l xl:border-white/20 xl:px-8">
+          <nav aria-label="Footer explore" className="xl:border-l xl:border-gold/35 xl:px-8">
             <h2 className={headingClassName}>Explore</h2>
-            <ul className="serif mt-5 space-y-3 text-sm leading-7">
+            <ul className="mt-5 space-y-3 text-sm leading-7">
               {navigationLinks.map(({ label, href }) => (
                 <li key={href}>
                   <a href={href} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4">
@@ -44,20 +44,20 @@ export default function Footer() {
               <li><span aria-disabled="true">Join the Community</span></li>
             </ul>
           </nav>
-          <div className="xl:border-l xl:border-white/20 xl:px-8">
+          <div className="xl:border-l xl:border-gold/35 xl:px-8">
             <h2 className={headingClassName}>Connect</h2>
-            <ul className="serif mt-5 space-y-3 text-sm leading-7">
+            <ul className="mt-5 space-y-3 text-sm leading-7">
               {connectLabels.map((label) => (
                 <li key={label}><span aria-disabled="true">{label}</span></li>
               ))}
             </ul>
           </div>
-          <div className="sm:col-span-2 xl:col-span-1 xl:border-l xl:border-white/20 xl:pl-8">
+          <div className="sm:col-span-2 xl:col-span-1 xl:border-l xl:border-gold/35 xl:pl-8">
             <h2 className={headingClassName}>Follow Our Journey</h2>
             <InstagramLink showLabel iconSize={20} className="mt-5 min-h-11 text-sm leading-7 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4" />
           </div>
         </div>
-        <div className="mt-12 flex flex-col gap-5 border-t border-white/20 pt-7 text-[10px] leading-5 tracking-[.22em] sm:mt-16 sm:flex-row sm:justify-between">
+        <div className="mt-12 flex flex-col gap-5 border-t border-gold/35 pt-7 text-[10px] leading-5 tracking-[.22em] sm:mt-16 sm:flex-row sm:justify-between">
           <span>© H.E.R 2026</span>
           <span>HEAL ✦ EXHALE ✦ RECONNECT</span>
         </div>

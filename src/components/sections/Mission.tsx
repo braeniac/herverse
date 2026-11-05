@@ -13,7 +13,7 @@ export default function Mission() {
           style={{ backgroundImage: `url('${photos[3]}')` }}
         />
       </div>
-      <div className="px-6 py-12 sm:p-12 lg:p-20 flex flex-col justify-center bg-[#f1ede4]">
+      <div className="px-6 py-12 sm:p-12 lg:p-20 flex flex-col justify-center bg-ivory">
         <p className="text-[10px] tracking-[.25em]">THE MISSION</p>
         <h2 className="serif text-3xl sm:text-4xl mt-3">A Space to Simply Be</h2>
         <p className="text-sm leading-7 mt-5">
@@ -21,7 +21,7 @@ export default function Mission() {
           exhale, reconnect and experience life together.
         </p>
       </div>
-      <div className="bg-[var(--green)] text-white flex items-center justify-center text-center px-6 py-12 sm:p-10">
+      <div className="bg-sage text-pine flex items-center justify-center text-center px-6 py-12 sm:p-10">
         <p className="serif text-3xl leading-relaxed">
           slow down
           <br />

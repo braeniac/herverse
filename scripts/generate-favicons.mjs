@@ -8,7 +8,7 @@ const symbol = await sharp('public/her-logo-transparent.png')
   .png().toBuffer();
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 920">
   <title>H.E.R circular symbol</title>
-  <rect width="920" height="920" rx="160" fill="#58654b"/>
+  <rect width="920" height="920" rx="160" fill="#262E26"/>
   <image x="80" y="48" width="760" height="824" href="data:image/png;base64,${symbol.toString('base64')}"/>
 </svg>\n`;
 await writeFile('public/favicon.svg', svg);
