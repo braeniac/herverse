@@ -54,7 +54,7 @@ export default function EventCarousel({ events, imageUrls }: {
     timer.current = setTimeout(finishSlide, 500);
   }
 
-  const buttonClassName = "flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-pine/60 bg-cream text-pine transition-colors hover:bg-sage motion-reduce:transition-none";
+  const buttonClassName = "flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-forest/60 bg-ivory text-forest transition-colors hover:bg-limestone motion-reduce:transition-none";
 
   return (
     <div

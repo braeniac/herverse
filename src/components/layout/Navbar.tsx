@@ -1,28 +1,62 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import { navigationLinks } from "@/data/navigation";
 import Logo from "@/components/ui/Logo";
 import InstagramLink from "@/components/ui/InstagramLink";
 
 export default function Navbar() {
+  const [activeSection, setActiveSection] = useState("#home");
+
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const header = document.querySelector(".site-header");
+      const boundary = (header?.getBoundingClientRect().bottom ?? 112) + 32;
+      let current = navigationLinks[0].href;
+      navigationLinks.forEach(({ href }) => {
+        const section = document.getElementById(href.slice(1));
+        if (section && section.getBoundingClientRect().top <= boundary) current = href;
+      });
+      setActiveSection(current);
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    schedule();
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    window.addEventListener("hashchange", schedule);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      window.removeEventListener("hashchange", schedule);
+    };
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 site-header bg-cream flex items-center px-6 sm:px-8 lg:px-10 xl:px-16 border-b hairline text-pine">
-      <nav className="hidden lg:flex flex-1 items-center gap-5 xl:gap-8 text-sm font-normal tracking-[.22em]">
+    <header className="fixed z-50 site-header bg-ivory flex items-center px-6 sm:px-8 lg:px-10 xl:px-16 text-forest">
+      <nav aria-label="Primary navigation" className="hidden lg:flex flex-1 items-center gap-6 xl:gap-9 text-sm font-normal tracking-[.08em]">
         {navigationLinks.map(({ label, href }) => (
           <a
             key={href}
             href={href}
-            className="inline-flex min-h-11 items-center underline decoration-transparent underline-offset-8 transition-colors hover:decoration-gold motion-reduce:transition-none"
+            aria-current={activeSection === href ? "location" : undefined}
+            className="desktop-nav-link inline-flex min-h-11 items-center"
           >
             {label}
           </a>
         ))}
       </nav>
       <Logo dark className="w-20 shrink-0" />
-      <nav className="hidden lg:flex flex-1 justify-end items-center gap-5 xl:gap-8 text-sm font-normal tracking-[.22em]">
-        <span className="rounded-full bg-pine text-cream px-4 xl:px-6 py-3 whitespace-nowrap">
-          JOIN HERVERSE
+      <nav aria-label="Community" className="hidden lg:flex flex-1 justify-end items-center gap-6 xl:gap-9 text-sm font-normal tracking-[.08em]">
+        <span className="desktop-nav-link inline-flex min-h-11 items-center whitespace-nowrap text-forest">
+          Join H.E.Rverse
         </span>
-        <InstagramLink gradientId="instagram-desktop-gradient" iconSize={20} className="text-sm font-normal text-pine" />
+        <InstagramLink gradientId="instagram-desktop-gradient" iconSize={20} className="desktop-nav-link min-h-11 justify-center text-sm font-normal text-forest" />
       </nav>
       <MobileMenu />
     </header>

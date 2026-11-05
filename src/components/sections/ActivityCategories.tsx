@@ -2,7 +2,7 @@ import { activityCategories } from "@/data/homepage";
 
 export default function ActivityCategories() {
   return (
-    <section className="grid grid-cols-3 md:grid-cols-6 bg-cream border-b hairline">
+    <section className="grid grid-cols-3 md:grid-cols-6 bg-ivory border-b hairline">
       {activityCategories.map(({ name, icon: Icon }) => {
         return (
           <div key={name} className="px-2 py-8 sm:py-11 lg:py-14 text-center border-r hairline">

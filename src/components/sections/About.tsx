@@ -5,9 +5,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="reveal-section bg-cream grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] lg:min-h-[760px]"
+      className="reveal-section bg-ivory grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] lg:min-h-[760px]"
     >
-      <div className="bg-ivory text-pine flex items-center justify-center px-8 py-16 md:py-20">
+      <div className="bg-limestone text-forest flex items-center justify-center px-8 py-16 md:py-20">
         <Logo dark className="w-44 lg:w-48 max-w-full" />
       </div>
       <div className="px-6 py-12 sm:p-12 lg:p-16 xl:p-28 flex flex-col justify-center">

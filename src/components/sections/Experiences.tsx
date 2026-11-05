@@ -3,10 +3,10 @@ import ExperienceCard from "@/components/ui/ExperienceCard";
 
 export default function Experiences() {
   return (
-    <section className="reveal-section bg-olive text-pine grid grid-cols-1 lg:grid-cols-[.8fr_2fr] px-6 sm:px-8 lg:px-20 py-16 sm:py-24 lg:py-36 gap-12 sm:gap-16 lg:gap-24">
+    <section className="reveal-section bg-ivory text-forest grid grid-cols-1 lg:grid-cols-[.8fr_2fr] px-6 sm:px-8 lg:px-20 py-16 sm:py-24 lg:py-36 gap-12 sm:gap-16 lg:gap-24">
       <div>
         <p className="text-[10px] tracking-[.25em]">WHAT WE DO</p>
-        <h2 className="serif text-4xl sm:text-5xl mt-3">
+        <h2 className="editorial-underline serif text-4xl sm:text-5xl mt-3">
           Experiences
           <br />
           That Nourish You

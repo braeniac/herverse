@@ -2,7 +2,7 @@ import type { HomepageEvent } from "@/data/homepage";
 
 export default function EventCard({ event, imageUrl }: { event: HomepageEvent; imageUrl: string }) {
   return (
-    <article className="h-full flex flex-col border border-pine/20 bg-cream">
+    <article className="h-full flex flex-col border border-forest/20 bg-ivory">
       <div
         className="h-56 lg:h-64 shrink-0 bg-cover bg-center"
         style={{ backgroundImage: `url('${imageUrl}')` }}

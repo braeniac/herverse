@@ -41,7 +41,7 @@ export default function MobileMenu() {
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
         aria-haspopup="dialog"
-        className="flex h-11 w-11 items-center justify-center rounded-full text-pine"
+        className="flex h-11 w-11 items-center justify-center rounded-full text-forest"
         onClick={() => {
           dialogRef.current?.showModal();
           setIsOpen(true);
@@ -61,14 +61,14 @@ export default function MobileMenu() {
           if (event.target === event.currentTarget) closeMenu();
         }}
       >
-        <div className="mobile-menu-panel relative flex h-full w-full flex-col bg-cream text-pine">
+        <div className="mobile-menu-panel relative flex h-full w-full flex-col bg-ivory text-forest">
           <h2 id="mobile-navigation-title" className="sr-only">H.E.R navigation</h2>
           <button
             type="button"
             autoFocus
             aria-label="Close navigation menu"
             onClick={closeMenu}
-            className="absolute right-6 top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-sage text-pine transition-colors motion-reduce:transition-none hover:bg-olive focus-visible:bg-olive active:bg-olive sm:right-10 sm:top-8 sm:h-14 sm:w-14"
+            className="absolute right-6 top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-limestone text-forest transition-colors motion-reduce:transition-none hover:bg-forest/15 focus-visible:bg-forest/15 active:bg-forest/20 sm:right-10 sm:top-8 sm:h-14 sm:w-14"
           >
             <X size={28} strokeWidth={1.5} aria-hidden="true" />
           </button>
@@ -77,7 +77,7 @@ export default function MobileMenu() {
               viewBox="0 0 240 420"
               aria-hidden="true"
               focusable="false"
-              className="pointer-events-none absolute bottom-0 right-0 -z-10 h-80 w-48 text-sage opacity-[.35] sm:h-[28rem] sm:w-64"
+              className="pointer-events-none absolute bottom-0 right-0 -z-10 h-80 w-48 text-limestone opacity-[.35] sm:h-[28rem] sm:w-64"
               fill="none"
               stroke="currentColor"
               strokeWidth="1"
@@ -101,15 +101,15 @@ export default function MobileMenu() {
                 ))}
                 <span aria-disabled="true" className="py-1">Join the Community</span>
               </div>
-              <div className="mt-16 w-full max-w-sm border-t border-gold/40 pt-8 sm:mt-24">
-                <ul className="flex flex-col gap-4 text-lg leading-relaxed text-pine sm:text-xl">
+              <div className="mt-16 w-full max-w-sm border-t border-champagne/40 pt-8 sm:mt-24">
+                <ul className="flex flex-col gap-4 text-lg leading-relaxed text-forest sm:text-xl">
                   {["Services", "Our Approach", "Stories", "Gallery", "Resources"].map((label) => (
                     <li key={label}><span aria-disabled="true">{label}</span></li>
                   ))}
                 </ul>
               </div>
-              <div className="mt-10 w-full max-w-sm border-t border-gold/40 pt-8 sm:mt-12">
-                <ul className="flex flex-col gap-4 text-lg leading-relaxed text-pine sm:text-xl">
+              <div className="mt-10 w-full max-w-sm border-t border-champagne/40 pt-8 sm:mt-12">
+                <ul className="flex flex-col gap-4 text-lg leading-relaxed text-forest sm:text-xl">
                   <li><span aria-disabled="true">Newsletter</span></li>
                   <li><a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram (opens in a new tab)" className="menu-link">Follow Us</a></li>
                   <li><span aria-disabled="true">Contact</span></li>
