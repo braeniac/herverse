@@ -51,10 +51,10 @@ export default function Navbar() {
           </a>
         ))}
       </nav>
-      <Logo dark className="w-20 shrink-0" />
+      <Logo dark className="mobile-navbar-logo w-20 shrink-0" />
       <nav aria-label="Community" className="hidden lg:flex flex-1 justify-end items-center gap-6 xl:gap-9 text-sm font-normal tracking-[.08em]">
         <span className="desktop-nav-link inline-flex min-h-11 items-center whitespace-nowrap text-forest">
-          Join H.E.Rverse
+          Join HERverse
         </span>
         <InstagramLink gradientId="instagram-desktop-gradient" iconSize={20} className="desktop-nav-link min-h-11 justify-center text-sm font-normal text-forest" />
       </nav>

@@ -222,3 +222,45 @@ body {
   border-radius: 999px;
   background: var(--color-champagne);
 }
+
+/* Compact floating navigation; tablet and desktop retain their existing layout. */
+@media (max-width: 767px) {
+  :root {
+    --navigation-height: 64px;
+    --navigation-top: calc(14px + env(safe-area-inset-top, 0px));
+    --navigation-gutter: 14px;
+  }
+  .site-header {
+    inset-inline-start: max(var(--navigation-gutter), env(safe-area-inset-left, 0px));
+    inset-inline-end: max(var(--navigation-gutter), env(safe-area-inset-right, 0px));
+    padding-inline: 18px;
+    border: 1px solid color-mix(in srgb, var(--color-forest) 12%, transparent);
+    border-radius: 12px;
+  }
+  .site-header .mobile-navbar-logo { height: 44px; width: auto; }
+  .site-main { padding-top: 0; }
+  .hero-content {
+    padding-top: calc(var(--navigation-top) + var(--navigation-height) + 2.5rem);
+  }
+  .mobile-menu-panel {
+    margin-top: var(--navigation-top);
+    margin-inline-start: max(var(--navigation-gutter), env(safe-area-inset-left, 0px));
+    width: calc(100% - max(var(--navigation-gutter), env(safe-area-inset-left, 0px)) - max(var(--navigation-gutter), env(safe-area-inset-right, 0px)));
+    height: calc(100% - var(--navigation-top) - 14px - env(safe-area-inset-bottom, 0px));
+    border: 1px solid color-mix(in srgb, var(--color-forest) 12%, transparent);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .mobile-menu-content { padding: 96px 24px 32px; }
+  .mobile-menu-primary { font-family: var(--font-heading); }
+  .mobile-menu-close {
+    top: 8px;
+    right: 16px;
+    color: var(--color-forest);
+    background: transparent;
+  }
+  .mobile-menu-close:hover, .mobile-menu-close:focus-visible, .mobile-menu-close:active {
+    color: var(--color-forest);
+    background: var(--color-limestone);
+  }
+}

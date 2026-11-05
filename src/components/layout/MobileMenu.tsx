@@ -68,11 +68,11 @@ export default function MobileMenu() {
             autoFocus
             aria-label="Close navigation menu"
             onClick={closeMenu}
-            className="absolute right-6 top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-limestone text-forest transition-colors motion-reduce:transition-none hover:bg-forest/15 focus-visible:bg-forest/15 active:bg-forest/20 sm:right-10 sm:top-8 sm:h-14 sm:w-14"
+            className="mobile-menu-close absolute right-6 top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-limestone text-forest transition-colors motion-reduce:transition-none hover:bg-forest/15 focus-visible:bg-forest/15 active:bg-forest/20 sm:right-10 sm:top-8 sm:h-14 sm:w-14"
           >
             <X size={28} strokeWidth={1.5} aria-hidden="true" />
           </button>
-          <div className="relative isolate flex-1 overflow-y-auto overscroll-contain px-8 pb-14 pt-28 sm:px-16 sm:pb-20 sm:pt-36 lg:px-24">
+          <div className="mobile-menu-content relative isolate min-h-0 flex-1 overflow-y-auto overscroll-contain px-8 pb-14 pt-28 sm:px-16 sm:pb-20 sm:pt-36 lg:px-24">
             <svg
               viewBox="0 0 240 420"
               aria-hidden="true"
@@ -93,13 +93,13 @@ export default function MobileMenu() {
                 if ((event.target as HTMLElement).closest("a")) closeMenu();
               }}
             >
-              <div className="flex w-full flex-col items-start gap-6 text-[clamp(2rem,6vw,4rem)] leading-[1.2] tracking-[-.035em] sm:gap-8">
+              <div className="mobile-menu-primary flex w-full flex-col items-start gap-6 text-[clamp(2rem,6vw,4rem)] leading-[1.2] tracking-[-.035em] sm:gap-8">
                 {navigationLinks.map(({ label, href }) => (
                   <a key={href} href={href} className="menu-link py-1">
                     {label.charAt(0) + label.slice(1).toLowerCase()}
                   </a>
                 ))}
-                <span aria-disabled="true" className="py-1">Join the Community</span>
+                <span aria-disabled="true" className="py-1">Join H.E.Rverse</span>
               </div>
               <div className="mt-16 w-full max-w-sm border-t border-champagne/40 pt-8 sm:mt-24">
                 <ul className="flex flex-col gap-4 text-lg leading-relaxed text-forest sm:text-xl">
